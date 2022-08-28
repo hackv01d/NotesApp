@@ -1,3 +1,19 @@
+const notes = document.querySelector(".notes");
+let userProgress;
+if (localStorage.getItem('notes-progress')) {
+    userProgress = JSON.parse(localStorage.getItem('notes-progress'))
+    document.querySelector(".example").remove();
+    JSON.parse(localStorage.getItem('notes-progress')).forEach(i => {
+        let note = document.createElement('div');
+        note.className = 'note';
+        note.innerHTML = i.split('#$#')[0];
+        note.style.borderColor = i.split('#$#')[1];
+        notes.append(note);
+    })
+} else {
+    userProgress = [];
+}
+
 const app = document.querySelector(".app")
 const notesSlide = document.querySelector('.notes-slide')
 const modalWindow = document.querySelector('.modal-window')
@@ -7,12 +23,10 @@ const noteTitle = document.querySelector(".note-title");
 const nameNote = document.querySelector(".name-note input");
 const descNote = document.querySelector(".desc-note textarea");
 const createNoteBtn = document.querySelector(".create-note-btn");
-const notes = document.querySelector(".notes");
 const colorNoteBtn = Array.from(document.querySelectorAll(".color-note-btn"));
 let toolsNoteBtn = Array.from(document.querySelectorAll(".tools-note-btn"));
 let toolsNote = Array.from(document.querySelectorAll(".tools-note"))
 let colorNote = 'white';
-
 
 colorNoteBtn.forEach(el => {
     el.style.background = el.getAttribute('data-color')
@@ -169,7 +183,6 @@ createNoteBtn.addEventListener("click", event => {
 
 })
 
-
 notes.addEventListener("click", editNote)
 
 function deleteNote(event) {
@@ -178,6 +191,23 @@ function deleteNote(event) {
 }
 
 notes.addEventListener("click", deleteNote)
+
+notesSlide.addEventListener("click", () => {
+    userProgress = [];
+    if (document.querySelectorAll('.note').length === 0) {
+        userProgress = [];
+        localStorage.setItem('notes-progress', JSON.stringify(userProgress))
+    } else {
+        Array.from(document.querySelectorAll(".note")).forEach(el => {
+            if (!el.classList.contains("example")) {
+                userProgress.push(el.innerHTML+`#$#${el.style.borderColor}`);
+                localStorage.setItem('notes-progress', JSON.stringify(userProgress));
+            }
+        })
+    }
+})
+
+
 
 
 
