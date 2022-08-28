@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+
+<body>
+    <div class="container">
+
+        <div class="screen">
+
+            <div class="app">
+
+                <div class="window">
+                    <div class="notes-slide slide" style="background-image:url('https://lh3.googleusercontent.com/pw/AL9nZEWsNuaTpB1ByD7HdIchTICpY5G9fLyAfW7gO4Ix9J73S1lCJ_RDD-u3IOgbC6EY_piWa0pT5xpX06oGFuUiYQKs9_pWVBYL3KYbRsNgCAIlUlZUbggqbLKJ2Fwvwrx__IibCBo-jWkv5qdo_n44PvID=w2160-h1215-no?authuser=0')">
+                        <div class="modal-window">
+                            <div class="note-title">
+                                <p class="modal-title">Add a new Note</p>
+                                <div class="form-new-note">
+                                    <div class="name-note">
+                                        <label for="name">Title</label> <br>
+                                        <input type="text" id="name">
+                                    </div>
+                                    <div class="desc-note">
+                                        <label for="decs">Description</label> <br>
+                                        <textarea name="" id="desc" cols="52" rows="7"></textarea>
+                                    </div>
+                                    <div class="color-note">
+                                        <ul>
+                                            <li><button class="color-note-btn" data-color="red"></button></li>
+                                            <li><button class="color-note-btn" data-color="#8e44ad"></button></li>
+                                            <li><button class="color-note-btn" data-color="orange"></button></li>
+                                            <li><button class="color-note-btn" data-color="#2ecc71"></button></li>
+                                            <li><button class="color-note-btn" data-color="#16D9E3"></button></li>
+                                            <li><button class="color-note-btn" data-color="white"></button></li>
+                                        </ul>
+                                    </div>
+
+
+                                    <div class="create-note">
+                                        <button class="create-note-btn">
+                                            Add Note
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="notes">
+                            <div class="add-note">
+                                <button type="button" class="add-note-btn">
+                                    <i class="fa fa-plus" aria-hidden="true"></i>
+                                </button>
+                                <p>Add new note</p>
+                            </div>
+                            <div class="note">
+                                <p class="ready-name-note">This is a Title</p>
+                                <p class="ready-desc-note">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, dicta!</p>
+                                <p class="ready-date-note">Feb 18, 2022</p>
+                                <button class="tools-note-btn" type="button">
+                                    <i class="fa fa-bars" aria-hidden="true"></i>
+                                </button>
+                                <div class="tools-note">
+                                    <button class="edit-note-btn" type="button">
+                                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                         Edit
+                                    </button> <br>
+                                    <button class="delete-note-btn" type="button">
+                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                         Delete
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+
+
+</html>
+
+
