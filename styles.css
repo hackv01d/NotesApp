@@ -303,6 +303,89 @@
 }
 
 
+@media (max-width: 800px) {
+    .slide {
+        overflow: scroll;
+    }
+    .note, .add-note {
+        width: 41vw;
+        height: 20vh;
+    }
+
+    .add-note-btn {
+        font-size: 7vw;
+    }
+
+    .add-note p {
+        font-size: 4vw;
+    }
+
+    .ready-name-note {
+        font-size: 4.8vw;
+    }
+
+    .ready-desc-note {
+        font-size: 3.4vw;
+    }
+
+    .ready-date-note {
+        font-size: 2.9vw;
+    }
+
+    .tools-note-btn {
+        font-size: 3.5vw;
+    }
+
+    .tools-note {
+        width: 19vw;
+        height: 7vh;
+    }
+
+    .tools-note button {
+        font-size: 4vw;
+    }
+
+    .note-title {
+        width: 85vw;
+        height: 55vh;
+    }
+
+    .modal-title {
+        font-size: 5.5vw;
+        padding: 2.5vw 3vw;
+    }
+
+    .name-note label, .desc-note label {
+        font-size: 5vw;
+    }
+
+    .name-note, .desc-note {
+        margin-top: 1.5vh;
+    }
+
+    .name-note input {
+        font-size: 5.5vw;
+        padding: 3vw;
+    }
+
+    .desc-note textarea {
+        font-size: 4.5vw;
+    }
+    .color-note {
+        margin-top: 1.8vh;
+    }
+    .color-note-btn {
+        width: 6.5vw;
+        height: 3vh;
+    }
+
+    .create-note-btn {
+        margin-top: 1.8vh;
+        font-size: 6vw;
+        width: 55vw;
+    }
+}
+
 
 
 

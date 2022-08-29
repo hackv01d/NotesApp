@@ -57,7 +57,7 @@ function showNewNote() {
         modalWindow.classList.add('hide-modal');
     }, 0)
     noteTitle.classList.add('hide-note-title');
-    setTimeout(() => nameNote.focus(), 500)
+    setTimeout(() => nameNote.focus(), 700)
     modalWindow.addEventListener('click', event => {
         if (event.target.classList.contains('modal-window')) {
             closeNoteTitle();
@@ -118,7 +118,7 @@ function clearColorNote() {
 
 function scrollNote() {
     const countNotes = document.querySelectorAll('.note').length
-    if (countNotes > 13) notesSlide.style.overflowY = 'scroll'
+    if (countNotes > 13 || cont.clientWidth<900) notesSlide.style.overflowY = 'scroll';
     else notesSlide.style.overflowY = 'hidden';
 }
 
