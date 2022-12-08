@@ -1,3 +1,3 @@
 # NotesApp
 
-[Beautiful Notes App (pet-project)] (https://ivantomsk.github.io/NotesApp/)
+[Beautiful NotesApp - pet-project](https://ivantomsk.github.io/NotesApp/)
